@@ -7,7 +7,7 @@
 
 ## Getting started
 
-    $ git clone https://github.com/donnemartin/haxor-news.git
+    $ git clone https://github.com/jbjw/threejs-lesson.git
     $ cd threejs-lesson
     $ node express.js
 
