@@ -1,0 +1,11 @@
+// position, rotation, scale
+// THREE.Vector3( x, y, z );
+// THREE.Euler( x, y, z );
+
+// https://raw.githubusercontent.com/jbjw/threejs-lesson/master/wood.jpg
+// https://raw.githubusercontent.com/jbjw/threejs-lesson/master/dirt.jpg
+// base 64 encode textures?
+
+// var img = new Image();
+// img.crossOrigin = "anonymous";
+// img.src = "https://graph.facebook.com/1387819034852828/picture?width=150&height=150";

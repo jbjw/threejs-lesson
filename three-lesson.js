@@ -7,21 +7,22 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
 
-// wood "https://drive.google.com/open?id=0B7lyTFrvzArtQUhQbk9VUmJMU00"
-// dirt "https://www.dropbox.com/s/ga85zdx5wirrski/dirt.jpg?dl=0"
-const texture = THREE.ImageUtils.loadTexture("https://www.dropbox.com/s/ga85zdx5wirrski/dirt.jpg");
-const material1 = new THREE.MeshBasicMaterial( { map: texture, side: THREE.DoubleSide } );
-const material2 = new THREE.MeshBasicMaterial( { color: 0x00ff00, wireframe: true } );
-
+// position, rotation, scale
 // THREE.Vector3( x, y, z );
 // THREE.Euler( x, y, z );
+
+// https://raw.githubusercontent.com/jbjw/threejs-lesson/master/wood.jpg
+// https://raw.githubusercontent.com/jbjw/threejs-lesson/master/dirt.jpg
+
+const texture = THREE.ImageUtils.loadTexture("https://raw.githubusercontent.com/jbjw/threejs-lesson/master/wood.jpg");
+const material1 = new THREE.MeshBasicMaterial( { map: texture, side: THREE.DoubleSide } );
+const material2 = new THREE.MeshBasicMaterial( { color: 0x00ff00, wireframe: true } );
 
 const geometry = new THREE.BoxGeometry( 1, 1, 1 );
 let cube = new THREE.Mesh( geometry, material1 );
 scene.add( cube );
 
 camera.position.z = 5;
-// position, rotation, scale
 
 var render = function () {
 	requestAnimationFrame( render );
