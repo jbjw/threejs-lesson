@@ -19,7 +19,7 @@ function log(req, res, next) {
 }
 
 app.use(log);
-app.use(express.static("../client", {index: "sandbox.html"}));
+app.use(express.static(".", {index: "three-lesson.html"}));
 //app.use(express.static(__dirname + "/public")); //use static files in ROOT/public folder
 
 app.get("/", function(req, res){
