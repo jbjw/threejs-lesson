@@ -7,9 +7,28 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
 
-// position, rotation, scale
-// THREE.Vector3( x, y, z );
-// THREE.Euler( x, y, z );
+
+let sky = new THREE.Sky();
+scene.add( sky.mesh );
+
+// Add Sun Helper
+let sunSphere = new THREE.Mesh(
+	new THREE.SphereBufferGeometry( 20000, 16, 8 ),
+	new THREE.MeshBasicMaterial( { color: 0xffffff } )
+);
+
+sunSphere.position.y = -700000;
+sunSphere.visible = false;
+scene.add( sunSphere );
+
+window.addEventListener( 'resize', onWindowResize, false );
+
+function onWindowResize() {
+	camera.aspect = window.innerWidth / window.innerHeight;
+	camera.updateProjectionMatrix();
+	renderer.setSize( window.innerWidth, window.innerHeight );
+	render();
+}
 
 // https://raw.githubusercontent.com/jbjw/threejs-lesson/master/wood.jpg
 // https://raw.githubusercontent.com/jbjw/threejs-lesson/master/dirt.jpg

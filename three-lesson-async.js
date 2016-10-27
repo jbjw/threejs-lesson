@@ -10,6 +10,17 @@ document.body.appendChild( renderer.domElement );
 const loader = new THREE.TextureLoader();
 // loader.crossOrigin = 'anonymous';
 
+var skyLoader = new THREE.CubeTextureLoader();
+skyLoader.setPath( 'textures/sky/' );
+
+var skyTexture = skyLoader.load( [
+	'px.png', 'nx.png',
+	'py.png', 'ny.png',
+	'pz.png', 'nz.png'
+] );
+
+var skyMaterial = new THREE.MeshBasicMaterial( { color: 0xffffff, envMap: textureCube } );
+
 // position, rotation, scale
 // THREE.Vector3( x, y, z );
 // THREE.Euler( x, y, z );
