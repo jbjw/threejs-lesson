@@ -25,7 +25,7 @@
 * http://mrdoob.com/lab/javascript/threejs/css3d/periodictable/
 * http://planetmaker.wthr.us/
 
-> [more awesome webvr resources]https://github.com/wizztjh/awesome-WebVR
+> more awesome webvr resources -- https://github.com/wizztjh/awesome-WebVR
 
 ## Stuff
 https://cdnjs.cloudflare.com/ajax/libs/three.js/r81/three.min.js
