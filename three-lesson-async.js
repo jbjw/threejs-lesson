@@ -44,7 +44,7 @@ function init() {
 
 	const wireframeMaterial = new THREE.MeshBasicMaterial( { color: 0x00ff00, wireframe: true } );
 
-	const boxGeometry = new THREE.BoxGeometry( 5, 5, 5 );
+	const boxGeometry = new THREE.BoxGeometry( 5, 5, 5, );
 	let cube = new THREE.Mesh( boxGeometry, woodMaterial );
 	cube.position.z = 5;
 	scene.add( cube );
@@ -85,5 +85,4 @@ function init() {
 		tick++;
 		renderer.render(scene, camera);
 	};
-
 }
